@@ -1,5 +1,5 @@
 # Supermarket Kata
-The start of a the classic supermarket kata, in C++ with CppUnit
+The start of the classic supermarket kata, in C++ with CppUnit
 
 First, write a function that, given a basket of goods, returns the sum to be paid at the checkout.
 Use the following prices:
