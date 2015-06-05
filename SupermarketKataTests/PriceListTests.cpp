@@ -10,7 +10,7 @@ TEST_FIXTURE(PriceListTests,
 	PriceOfTinOfBeansIs40p, 
 	PriceOfTinOfSoupIs90p, 
 	PriceOfTinOfPeachesIs55p, 
-	PriceOfColeslaw);
+	PriceOfColeslawIs50p);
 
 void PriceListTests::PriceOfTinOfBeansIs40p()
 {
@@ -48,7 +48,7 @@ void PriceListTests::PriceOfTinOfPeachesIs55p()
 	CPPUNIT_ASSERT_EQUAL(55, price);
 }
 
-void PriceListTests::PriceOfColeslaw()
+void PriceListTests::PriceOfColeslawIs50p()
 {
 	// Arrange
 	PriceList priceList;
