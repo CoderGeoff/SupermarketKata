@@ -13,8 +13,7 @@ public:
 	const std::string TinOfPeaches() const { return std::string("TinOfPeaches"); };
 	const std::string Coleslaw() const { return std::string("Coleslaw"); };
 
-	int operator [](const std::string& item);
-
+    int LookUp(const std::string& item) const;
 
 private:
 	std::map<std::string, int> m_Prices;

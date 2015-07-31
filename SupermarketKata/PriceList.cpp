@@ -11,7 +11,11 @@ PriceList::PriceList()
 }
 
 
-int PriceList::operator [](const std::string& item)
+
+int PriceList::LookUp(const std::string& item) const
 {
-	return m_Prices[item];
+    auto lookup = m_Prices.find(item);
+    return lookup == m_Prices.end() ? 0 : lookup->second;
 }
+
+

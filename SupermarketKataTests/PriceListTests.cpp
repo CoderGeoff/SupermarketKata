@@ -18,7 +18,7 @@ void PriceListTests::PriceOfTinOfBeansIs40p()
 	PriceList priceList;
 
 	// Act
-	auto price = priceList["TinOfBeans"];
+	auto price = priceList.LookUp("TinOfBeans");
 
 	// Assert
 	CPPUNIT_ASSERT_EQUAL(40, price);
@@ -30,7 +30,7 @@ void PriceListTests::PriceOfTinOfSoupIs90p()
 	PriceList priceList;
 
 	// Act
-	auto price = priceList["TinOfSoup"];
+    auto price = priceList.LookUp("TinOfSoup");
 
 	// Assert
 	CPPUNIT_ASSERT_EQUAL(90, price);
@@ -42,7 +42,7 @@ void PriceListTests::PriceOfTinOfPeachesIs55p()
 	PriceList priceList;
 
 	// Act
-	auto price = priceList["TinOfPeaches"];
+    auto price = priceList.LookUp("TinOfPeaches");
 
 	// Assert
 	CPPUNIT_ASSERT_EQUAL(55, price);
@@ -54,7 +54,7 @@ void PriceListTests::PriceOfColeslawIs50p()
 	PriceList priceList;
 
 	// Act
-	auto price = priceList["Coleslaw"];
+    auto price = priceList.LookUp("Coleslaw");
 
 	// Assert
 	CPPUNIT_ASSERT_EQUAL(50, price);
