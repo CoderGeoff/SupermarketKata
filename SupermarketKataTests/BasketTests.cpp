@@ -5,7 +5,6 @@
 
 #include "TestFixtureMacro.h"
 #include "../SupermarketKata/Basket.h"
-#include <algorithm>
 
 TEST_FIXTURE(BasketTests,
     GivenAnEmptyBasket_CountShouldBeZero,
