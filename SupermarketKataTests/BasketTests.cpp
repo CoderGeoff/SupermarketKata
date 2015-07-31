@@ -13,29 +13,29 @@ TEST_FIXTURE(BasketTests,
 
 void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
 {
-    Basket b;
-    CPPUNIT_ASSERT_EQUAL(0, b.Count());
+    Basket basket;
+    CPPUNIT_ASSERT_EQUAL(0, basket.Count());
 }
 
 void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
 {
-    Basket b;
-    CPPUNIT_ASSERT_EQUAL(b.Count(), 0);
-    b.Add("TinOfBeans");
-    b.Add("Coleslaw");
-    b.Add("TinOfBeans");
-    CPPUNIT_ASSERT_EQUAL(b.Count(), 3);
-    auto i = b.begin();
-    for (int ii = 0; ii < 3; ++ii, ++i)
+    Basket basket;
+    CPPUNIT_ASSERT_EQUAL(basket.Count(), 0);
+    basket.Add("TinOfBeans");
+    basket.Add("Coleslaw");
+    basket.Add("TinOfBeans");
+    CPPUNIT_ASSERT_EQUAL(basket.Count(), 3);
+    auto basketIterator = basket.begin();
+    for (int itemIndex = 0; itemIndex < 3; ++itemIndex, ++basketIterator)
     {
-        switch (ii)
+        switch (itemIndex)
         {
         case 0:
         case 2:
-            CPPUNIT_ASSERT_EQUAL(*i, std::string("TinOfBeans"));
+            CPPUNIT_ASSERT_EQUAL(*basketIterator, std::string("TinOfBeans"));
             break;
         case 1:
-            CPPUNIT_ASSERT_EQUAL(*i, std::string("Coleslaw"));
+            CPPUNIT_ASSERT_EQUAL(*basketIterator, std::string("Coleslaw"));
         }
     }
 }
