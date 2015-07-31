@@ -9,7 +9,7 @@
 
 TEST_FIXTURE(BasketTests,
     GivenAnEmptyBasket_CountShouldBeZero,
-    TestBasket2);
+    GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems);
 
 void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
 {
@@ -17,7 +17,7 @@ void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
     CPPUNIT_ASSERT_EQUAL(0, b.Count());
 }
 
-void BasketTests::TestBasket2()
+void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
 {
     Basket b;
     CPPUNIT_ASSERT_EQUAL(b.Count(), 0);
