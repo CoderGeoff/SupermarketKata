@@ -5,6 +5,7 @@
 
 #include "TestFixtureMacro.h"
 #include "../SupermarketKata/Basket.h"
+#include <numeric>
 
 TEST_FIXTURE(BasketTests,
     GivenAnEmptyBasket_CountShouldBeZero,
@@ -35,12 +36,8 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldConta
     basket.Add("TinOfBeans");
 
     // When
-    std::string basketContents;
-    for each (auto item in basket)
-    {
-        basketContents += (basketContents.length() == 0 ? "" : ", ");
-        basketContents += item;
-    }
+    auto append = [](std::string& contents, const std::string& next) { return contents + (contents.length() == 0 ? "" : ", ") + next; };
+    auto basketContents = std::accumulate(basket.begin(), basket.end(), std::string(""), append);
 
     // Then
     auto expectedContents = std::string("TinOfBeans, Coleslaw, TinOfBeans");
