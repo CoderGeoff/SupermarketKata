@@ -29,11 +29,13 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenCounted_BasketShouldContai
 
 void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
 {
+    // Given
     Basket basket;
     basket.Add("TinOfBeans");
     basket.Add("Coleslaw");
     basket.Add("TinOfBeans");
 
+    // When
     std::stringstream contentsStringBuilder;
     for (auto itemIterator = basket.begin(); itemIterator != basket.end(); ++itemIterator)
     {
@@ -41,6 +43,8 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldConta
         contentsStringBuilder << *itemIterator;
     }
     auto basketContents = contentsStringBuilder.str();
+
+    // Then
     auto expectedContents = std::string("TinOfBeans, Coleslaw, TinOfBeans");
     CPPUNIT_ASSERT_EQUAL(expectedContents, basketContents);
 }
