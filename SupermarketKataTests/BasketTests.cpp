@@ -20,7 +20,6 @@ void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
 void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
 {
     Basket basket;
-    CPPUNIT_ASSERT_EQUAL(basket.Count(), 0);
     basket.Add("TinOfBeans");
     basket.Add("Coleslaw");
     basket.Add("TinOfBeans");
