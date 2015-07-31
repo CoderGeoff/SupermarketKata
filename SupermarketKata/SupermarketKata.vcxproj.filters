@@ -24,9 +24,6 @@
     <ClInclude Include="PriceList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Checkout.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Basket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -39,9 +36,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PriceList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Checkout.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Basket.cpp">
