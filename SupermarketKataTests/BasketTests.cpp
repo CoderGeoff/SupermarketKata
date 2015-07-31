@@ -35,13 +35,12 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldConta
     basket.Add("TinOfBeans");
 
     // When
-    std::stringstream contentsStringBuilder;
-    for (auto itemIterator = basket.begin(); itemIterator != basket.end(); ++itemIterator)
+    std::string basketContents;
+    for each (auto item in basket)
     {
-        contentsStringBuilder << (itemIterator == basket.begin() ? "" : ", ");
-        contentsStringBuilder << *itemIterator;
+        basketContents += (basketContents.length() == 0 ? "" : ", ");
+        basketContents += item;
     }
-    auto basketContents = contentsStringBuilder.str();
 
     // Then
     auto expectedContents = std::string("TinOfBeans, Coleslaw, TinOfBeans");
