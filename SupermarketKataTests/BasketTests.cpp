@@ -23,7 +23,7 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenCounted_BasketShouldContai
     basket.Add("TinOfBeans");
     basket.Add("Coleslaw");
     basket.Add("TinOfBeans");
-    CPPUNIT_ASSERT_EQUAL(basket.Count(), 3);
+    CPPUNIT_ASSERT_EQUAL(3, basket.Count());
 }
 
 void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
