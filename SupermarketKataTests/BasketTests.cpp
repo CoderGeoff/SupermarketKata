@@ -9,6 +9,7 @@
 
 TEST_FIXTURE(BasketTests,
     GivenAnEmptyBasket_CountShouldBeZero,
+    GivenThreeItemsAreAddedToBasket_WhenCounted_BasketShouldContainThreeItems,
     GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems);
 
 void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
@@ -17,13 +18,21 @@ void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
     CPPUNIT_ASSERT_EQUAL(0, basket.Count());
 }
 
-void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
+void BasketTests::GivenThreeItemsAreAddedToBasket_WhenCounted_BasketShouldContainThreeItems()
 {
     Basket basket;
     basket.Add("TinOfBeans");
     basket.Add("Coleslaw");
     basket.Add("TinOfBeans");
     CPPUNIT_ASSERT_EQUAL(basket.Count(), 3);
+}
+
+void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldContainTheAddedItems()
+{
+    Basket basket;
+    basket.Add("TinOfBeans");
+    basket.Add("Coleslaw");
+    basket.Add("TinOfBeans");
     auto basketIterator = basket.begin();
     for (int itemIndex = 0; itemIndex < 3; ++itemIndex, ++basketIterator)
     {
