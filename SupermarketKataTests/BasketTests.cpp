@@ -40,5 +40,7 @@ void BasketTests::GivenThreeItemsAreAddedToBasket_WhenExamined_BasketShouldConta
         contentsStringBuilder << (itemIterator == basket.begin() ? "" : ", ");
         contentsStringBuilder << *itemIterator;
     }
-    CPPUNIT_ASSERT_EQUAL(std::string("TinOfBeans, Coleslaw, TinOfBeans"), contentsStringBuilder.str());
+    auto basketContents = contentsStringBuilder.str();
+    auto expectedContents = std::string("TinOfBeans, Coleslaw, TinOfBeans");
+    CPPUNIT_ASSERT_EQUAL(expectedContents, basketContents);
 }
