@@ -8,10 +8,10 @@
 #include <algorithm>
 
 TEST_FIXTURE(BasketTests,
-    TestBasket1,
+    GivenAnEmptyBasket_CountShouldBeZero,
     TestBasket2);
 
-void BasketTests::TestBasket1()
+void BasketTests::GivenAnEmptyBasket_CountShouldBeZero()
 {
     Basket b;
     CPPUNIT_ASSERT_EQUAL(0, b.Count());
