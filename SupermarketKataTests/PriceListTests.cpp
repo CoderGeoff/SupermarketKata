@@ -7,56 +7,56 @@
 #include "..\SupermarketKata\PriceList.h"
 
 TEST_FIXTURE(PriceListTests, 
-	PriceOfTinOfBeansIs40p, 
-	PriceOfTinOfSoupIs90p, 
-	PriceOfTinOfPeachesIs55p, 
-	PriceOfColeslawIs50p);
+	PriceOfTinOfBeansShouldBe40p, 
+	PriceOfTinOfSoupShouldBe90p, 
+	PriceOfTinOfPeachesShouldBe55p, 
+	PriceOfColeslawShouldBe50p);
 
-void PriceListTests::PriceOfTinOfBeansIs40p()
+void PriceListTests::PriceOfTinOfBeansShouldBe40p()
 {
-	// Arrange
+	// Given
 	PriceList priceList;
 
-	// Act
+	// When
 	auto price = priceList["TinOfBeans"];
 
-	// Assert
+	// Then
 	CPPUNIT_ASSERT_EQUAL(40, price);
 }
 
-void PriceListTests::PriceOfTinOfSoupIs90p()
+void PriceListTests::PriceOfTinOfSoupShouldBe90p()
 {
-	// Arrange
+	// Given
 	PriceList priceList;
 
-	// Act
+	// When
 	auto price = priceList["TinOfSoup"];
 
-	// Assert
+	// Then
 	CPPUNIT_ASSERT_EQUAL(90, price);
 }
 
-void PriceListTests::PriceOfTinOfPeachesIs55p()
+void PriceListTests::PriceOfTinOfPeachesShouldBe55p()
 {
-	// Arrange
+	// Given
 	PriceList priceList;
 
-	// Act
+	// When
 	auto price = priceList["TinOfPeaches"];
 
-	// Assert
+	// Then
 	CPPUNIT_ASSERT_EQUAL(55, price);
 }
 
-void PriceListTests::PriceOfColeslawIs50p()
+void PriceListTests::PriceOfColeslawShouldBe50p()
 {
-	// Arrange
+	// Given
 	PriceList priceList;
 
-	// Act
+	// When
 	auto price = priceList["Coleslaw"];
 
-	// Assert
+	// Then
 	CPPUNIT_ASSERT_EQUAL(50, price);
 }
 
